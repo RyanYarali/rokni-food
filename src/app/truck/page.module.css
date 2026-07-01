@@ -1,0 +1,112 @@
+.main {
+  margin: 0 auto;
+  display: flex;
+  width: 100%;
+  max-width: 56rem;
+  flex: 1;
+  flex-direction: column;
+  padding: 3.5rem var(--space-4);
+}
+
+.section {
+  border: 1px solid color-mix(in srgb, var(--color-border) 80%, transparent);
+  border-radius: 1rem;
+  background: var(--color-surface);
+  padding: 2rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.hero {
+  max-width: 48rem;
+}
+
+.eyebrow {
+  margin: 0;
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-accent);
+}
+
+.title {
+  margin: var(--space-2) 0 0;
+  font-size: clamp(2.1rem, 6vw, 3.2rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.intro {
+  margin: var(--space-4) 0 var(--space-2);
+  max-width: 42rem;
+  font-size: var(--font-size-md);
+  color: var(--color-muted);
+}
+
+.infoGrid {
+  margin-top: var(--space-8);
+  display: grid;
+  gap: var(--space-5, 1.25rem);
+}
+
+.infoCard {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-surface-alt);
+  padding: 1rem 1.1rem;
+}
+
+.infoTitle {
+  margin: 0;
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  color: color-mix(in srgb, var(--color-text) 90%, var(--color-accent));
+}
+
+.infoText {
+  margin: var(--space-2) 0 0;
+  font-size: var(--font-size-xs);
+  color: var(--color-muted);
+}
+
+.ctaButton {
+  margin-top: var(--space-8);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  border-radius: var(--radius);
+  background: var(--color-accent);
+  padding: 0.72rem 1.2rem;
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  color: #fffaf6;
+  text-decoration: none;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    background-color 180ms ease;
+}
+
+.ctaButton:hover {
+  transform: translateY(-2px);
+  background: var(--color-accent-hover);
+  box-shadow: 0 12px 22px rgba(173, 79, 51, 0.25);
+}
+
+@media (min-width: 640px) {
+  .main {
+    padding-top: 4.25rem;
+    padding-bottom: 4.25rem;
+    padding-left: var(--space-6);
+    padding-right: var(--space-6);
+  }
+
+  .section {
+    padding: 2.6rem;
+  }
+
+  .infoGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}

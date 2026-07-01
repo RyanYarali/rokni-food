@@ -1,0 +1,48 @@
+.main {
+  margin: 0 auto;
+  display: flex;
+  width: 100%;
+  max-width: 56rem;
+  flex: 1;
+  flex-direction: column;
+  padding: 3.5rem var(--space-4);
+}
+
+.section {
+  border: 1px solid color-mix(in srgb, var(--color-border) 80%, transparent);
+  border-radius: 1rem;
+  background: var(--color-surface);
+  padding: 2rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.title {
+  font-size: clamp(2.05rem, 5.2vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.firstParagraph {
+  margin: var(--space-6) 0 0;
+  font-size: var(--font-size-md);
+  color: var(--color-muted);
+}
+
+.paragraph {
+  margin: var(--space-4) 0 0;
+  font-size: var(--font-size-sm);
+  color: var(--color-muted);
+}
+
+@media (min-width: 640px) {
+  .main {
+    padding-top: 4.25rem;
+    padding-bottom: 4.25rem;
+    padding-left: var(--space-6);
+    padding-right: var(--space-6);
+  }
+
+  .section {
+    padding: 2.5rem;
+  }
+}
